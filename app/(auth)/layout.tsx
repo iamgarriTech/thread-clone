@@ -24,9 +24,21 @@ export default function RootLayout({
         baseTheme: dark,
       }}
     >
-      <html lang='en'>
-        <body className={`${inter.className} bg-dark-1`}>{children}</body>
+      <html lang="en">
+        <body className={`${inter.className} bg-dark-1`} style={styles.body}>
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   );
 }
+
+const styles = {
+  body: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100vh",
+    margin: 0,
+  },
+};
